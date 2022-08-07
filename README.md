@@ -54,4 +54,12 @@ SendWelcomeEmailJob.php
 
     dd('sent');
 });
+Before running the app, let’s clear the config:
 
+php artisan optimize && php artisan config:clear
+Now run the app:
+
+php artisan serve
+After firing the job, run this command in the console to process the queue job:
+
+php artisan queue:work
